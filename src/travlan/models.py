@@ -79,7 +79,7 @@ class Comment(models.Model):
     post_num = models.ForeignKey('Post', models.DO_NOTHING, db_column='post_num', blank=True, null=True)
     title = models.CharField(max_length=45, blank=True, null=True)
     content = models.TextField(blank=True, null=True)
-    score = models.CharField(max_length=1, blank=True, null=True)
+    score = models.IntegerField(blank=True, null=True)
     member_num = models.ForeignKey('Member', models.DO_NOTHING, db_column='member_num', blank=True, null=True)
     created_date = models.DateField(blank=True, null=True)
     updated_date = models.DateField(blank=True, null=True)
